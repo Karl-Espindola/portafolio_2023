@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.contenedor{
+    background-image: url("assets/fondo/2.jpg");
+    background-size: cover;
+  
+}
+.principal{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+}
+.contenedor-nombre{
+    height: 70vh;
+    width: 100%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.nombre{
+    font-size: 100px;
+}
+.profesion{
+    font-size: 100px;
+}
+.navegacion{
+    width: 100%;
+    height: 30vh;
+}
+.lista{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    gap: 50px;
+}
+li{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+/* ######################### */
+.portafolio{
+    position: absolute;
+    top:0;
+    left:-100%;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    transition: left 0.5s;
+}
+.seccP{
+    width: 85%;
+    margin: auto;
+    padding-bottom:50px;
+}
+.contenedor-titulo-porta{
+    width: 245px;
+    margin: auto;
+    margin-top:60px;
+}
+.linea_{
+    min-height: 2px;
+    min-width:calc(100% - 143px);
+    background-color: white;
+}
+.contenedor-trabajos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 37px;
+    margin-top: 40px;
+
+}
+.trabajo-img{
+    width: 350px;
+}
+.trabajo-img img{
+    width:100%;
+    height: 250px;
+}
+/* ######################### */
+.acerca{
+    position: absolute;
+    top:-100%;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    transition: top 0.5s;
+}
+.chevron{
+    position: absolute;
+    top:30px;
+    right: 40px;
+    cursor: pointer;
+}
+.seccA{
+    display: flex;
+    justify-content:center;
+}
+.contenedor-ilustra{
+    width: 40%;
+}
+.contenedor-quien{
+    width: 40%;
+    padding: 30px 0;
+    color: white;
+}
+.contenedor-titulo-mi{
+    width: auto;
+}
+.titulo-mi{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 44px;
+    color: white;
+}
+.sub-linea{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.linea{
+    min-height: 2px;
+    min-width: 31%;
+    background-color: white;
+}
+.sub-mi{
+    color: #EE3F32;
+    font-weight: 600;
+
+}
+.sobre-mi{
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #b7b7b7;
+}
+.btn{
+    display: inline-block;
+    height: 50px;
+    margin-top: 30px;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #fe483b;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: #FCE2FF;
+}
+/* ############################### */
+.contacto{
+    position: absolute;
+    top:0;
+    right:-100%;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 30px;
+    transition: all 0.5s;
+   
+}
+.seccC{
+    width: 80%;
+    margin: auto;
+}
+.ancho-linea-contacto{min-width:calc(100% - 182px);}
+.chevron-reve{
+    position: absolute;
+    top:30px;
+    left: 40px;
+    cursor: pointer;
+}
+.contenedor-tel-correo{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.tel, .correo{
+    position: relative;
+    width: 530px;
+    height: 200px;
+    display: flex;
+}
+.tel{
+    background-color: rgba(21, 21, 21, 0.8);
+}
+.tel img{
+    width: 100%;
+    position: absolute;
+
+}
+.infoTel, .infoCorreo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(21, 21, 21, 0.8);
+    z-index: 1;
+
+}
+.infoTel-p, .infoCorreo-p{
+    font-size: 20px;
+    color: #FFFEFE;
+}
+.num, .email{
+    font-size: 18px;
+    color: #B7B7A3;
+}
+.correo img{
+    width: 100%;
+    position: absolute;
+}
+.contenedor-formulario{
+    margin-top: 40px;
+}
+.formulario{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.formulario P{
+    color: white;
+    font-size: 30px;
+}
+.grupo-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.grupo-form .textCaja{
+    width:48%;
+}
+.textCaja{
+    height: 50px;
+    padding: 0 15px;
+    background-color: #111111;
+    border: none;
+    outline: none;
+    color: white;
+}
+textarea{
+    padding:15px;
+    background-color: #111111;
+    border: none;
+    outline: none;
+    color: white;
+}
+.btn-form{
+    display: inline-block;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #fe483b;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+/* ############################## */
+.ocultar{
+    display: none;
+}
