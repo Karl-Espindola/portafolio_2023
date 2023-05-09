@@ -31,7 +31,8 @@ let trabajos=[
         gestor de base de datos y la versión 10 de Laravel.`,
         
         "video":"assets/video/crud.mp4",
-        "github":"",
+        "github":"https://github.com/Karl-Espindola/Crud-Laravel.git",
+        "sitio":"",
         "imagen":"assets/trabajos/crud.png",
     },
     {
@@ -40,8 +41,9 @@ let trabajos=[
         "descripcion":`Sitio web hecho con HTML, Css y JavaScript puros.`,
         
         "video":"assets/video/promina.mp4",
-        "github":"",
-        "imagen":"assets/trabajos/logo-dark.png",
+        "github":"https://github.com/Karl-Espindola/promina.git",
+        "sitio":"https://karl-espindola.github.io/promina/",
+        "imagen":"assets/trabajos/promina.png",
     },
     {
         "titulo":"App del Clima",
@@ -52,6 +54,7 @@ let trabajos=[
         
         "video":"assets/video/clima.mp4",
         "github":"https://github.com/Karl-Espindola/clima.git",
+        "sitio":"https://karl-espindola.github.io/clima/",
         "imagen":"assets/trabajos/clima.jpg",
     },
     {
@@ -60,8 +63,9 @@ let trabajos=[
         "descripcion":`Buscador de Pokemons. Consume una Api de la que extrae la información.
         Sitio web hecho con HTML, Css y JavaScript puros.`,
         
-        "video":"assets/video/",
+        "video":"assets/video/pokedex.mp4",
         "github":"https://github.com/Karl-Espindola/pokedex.git",
+        "sitio":"https://karl-espindola.github.io/pokedex/",
         "imagen":"assets/trabajos/pokemon.jpg",
     },
     {
@@ -71,7 +75,8 @@ let trabajos=[
         Sitio web hecho con HTML, Css y JavaScript puros.`,
         
         "video":"assets/video/dashboard.mp4",
-        "github":"",
+        "github":"https://github.com/Karl-Espindola/dashboard",
+        "sitio":"https://karl-espindola.github.io/dashboard/",
         "imagen":"assets/trabajos/graficas.jpg",
     }
 ];
@@ -93,7 +98,8 @@ let chevronLeft=document.getElementById("chevronLeft");
 let chevronown=document.getElementById("chevronDown");
 let svg_circles = document.getElementsByClassName("svg-circles");
 let circulos = document.getElementsByTagName("circle");
-
+let btnTrabajos = document.getElementById("btn_trabajos");
+let btnHabilidades = document.getElementById("btn_habilidades");
 
 let circle = document.getElementsByClassName("circle");
 let img_habilidades = document.getElementsByClassName("img-habilidades");
@@ -164,7 +170,23 @@ chevronDown.addEventListener("click",function(){
     }, 500);
 });
 
+btnTrabajos.addEventListener("click", ()=>{
+    seccionAcerca.setAttribute("style","top:-100%");
+    seccionPortafolio.classList.remove("ocultar");
+    setTimeout(() => {
+        seccionPortafolio.setAttribute("style","left:0");
+    }, 1);
 
+});
+
+btnHabilidades.addEventListener("click", ()=>{
+    seccionAcerca.setAttribute("style","top:-100%");
+    seccionHabilidades.classList.remove("ocultar");
+    setTimeout(() => {
+        seccionHabilidades.setAttribute("style","top:0");
+    }, 1);
+    animacionPorcentaje();
+})
 
 
 
@@ -219,12 +241,14 @@ for(let i=0; i<trabajos.length; i++){
     let con_links = document.createElement("div");
     let con_link_git = document.createElement("a");
     let con_ver_demo = document.createElement("p");
+    let con_link_web = document.createElement("a");
     let div_bg = document.createElement("div");
     
     let tex_titulo = document.createTextNode(trabajos[i].titulo);
     let tex_descripcion = document.createTextNode(trabajos[i].descripcion);
     let text_link_git = document.createTextNode("Repositorio en GitHub");
-    let text_ver_demo = document.createTextNode("Ver Demo");
+    let text_ver_demo = document.createTextNode(trabajos[i]['video']==="" ? "": "Ver Demo");
+    let text_ver_web = document.createTextNode(trabajos[i]['sitio']==="" ? "":"Ir al sitio");
     
     
     con_trabajo.appendChild(con_imagen);
@@ -238,13 +262,17 @@ for(let i=0; i<trabajos.length; i++){
     con_links.appendChild(con_link_git);
     con_link_git.appendChild(text_link_git);
     con_links.appendChild(con_ver_demo);
+    con_links.appendChild(con_link_web);
     con_ver_demo.appendChild(text_ver_demo);
+    con_link_web.appendChild(text_ver_web);
     
 
     con_descripcion.appendChild(tex_descripcion);
     con_imagen.src = trabajos[i].imagen;
     con_link_git.href = trabajos[i].github;
     con_link_git.target = "_blank"
+    con_link_web.href = trabajos[i].sitio;
+    con_link_web.target = "_blank"
     con_ver_demo.id="v"+i;
     con_ver_demo.addEventListener("click", () => videoDemo(trabajos[i].video))
 
@@ -255,6 +283,7 @@ for(let i=0; i<trabajos.length; i++){
     div_bg.classList.add("div-bg");
     con_link_git.classList.add("link");
     con_ver_demo.classList.add("link-demo");
+    con_link_web.classList.add("link");
 }
 
 
