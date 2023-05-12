@@ -441,7 +441,7 @@ li a{
    
 }
 .chevron{
-    position: absolute;
+    position: fixed;
     top:30px;
     right: 40px;
     cursor: pointer;
@@ -563,7 +563,7 @@ li a{
 }
 .ancho-linea-contacto{min-width:calc(100% - 182px);}
 .chevron-reve{
-    position: absolute;
+    position: fixed;
     top:30px;
     left: 40px;
     cursor: pointer;

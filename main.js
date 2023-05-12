@@ -175,6 +175,7 @@ btnTrabajos.addEventListener("click", ()=>{
     seccionPortafolio.classList.remove("ocultar");
     setTimeout(() => {
         seccionPortafolio.setAttribute("style","left:0");
+        seccionAcerca.classList.add("ocultar");
     }, 1);
 
 });
@@ -184,6 +185,7 @@ btnHabilidades.addEventListener("click", ()=>{
     seccionHabilidades.classList.remove("ocultar");
     setTimeout(() => {
         seccionHabilidades.setAttribute("style","top:0");
+        seccionAcerca.classList.add("ocultar");
     }, 1);
     animacionPorcentaje();
 })
