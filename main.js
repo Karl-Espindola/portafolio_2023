@@ -114,7 +114,7 @@ function cerrarVideo(){
 }
 
 function videoDemo(src){
-    video_demo.innerHTML= "<video src="+src+" autoplay='true' muted='true' loop='true' class='video'></video>";
+    video_demo.innerHTML= "<video src="+src+" autoplay='true' poster = 'assets/loader.gif' muted='true' loop='true' class='video'></video>";
     contenedor_video.style.display="flex";
     console.log(contenedor_video);
 }
