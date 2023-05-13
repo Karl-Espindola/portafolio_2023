@@ -107,7 +107,28 @@ let img_habilidades = document.getElementsByClassName("img-habilidades");
 let contenedor_video = document.getElementById("contenedor_video");
 let video_demo = document.getElementById("video_demo");
 let cerrar = document.getElementById("svg8");
+let cerrarModal = document.getElementById("svg9");
+let enviar = document.getElementById("btn_enviar");
+let mensaje = document.getElementById("mensaje");
+
+let inputs = document.getElementsByTagName("input");
+let textArea = document.getElementsByTagName("textarea");
 cerrar.addEventListener("click", cerrarVideo);
+cerrarModal.addEventListener("click", cerrarMensaje);
+
+for (input of inputs){
+    input.addEventListener("focus", ()=>{
+        mensaje.classList.remove("ocultar");
+    })
+}
+
+textArea[0].addEventListener("focus", ()=>{
+    mensaje.classList.remove("ocultar");
+});
+
+function cerrarMensaje(){
+    mensaje.classList.add("ocultar");
+}
 
 function cerrarVideo(){
     contenedor_video.style.display="none";
@@ -190,7 +211,10 @@ btnHabilidades.addEventListener("click", ()=>{
     animacionPorcentaje();
 })
 
-
+enviar.addEventListener("click", (e)=>{
+    e.preventDefault();
+    mensaje.classList.remove("ocultar");
+})
 
 for(let svg_c of svg_circles){
     svg_c.setAttribute("style", "width:"+lado+"; height:"+lado);

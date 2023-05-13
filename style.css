@@ -340,6 +340,7 @@ li a{
     right: 30px;
     cursor: pointer;
 }
+
 .video{
     /* width: 700px; */
     width: 100%;
@@ -660,6 +661,43 @@ textarea{
     background-color: #fe483b;
     font-size: 15px;
     color: white;
+    cursor: pointer;
+}
+
+.modal-mensaje{
+    position: fixed;
+    z-index: 5;
+    top: 50px;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #eaebed;
+    display: flex;
+
+}
+.contenido-mensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.contenido-mensaje h3{
+    color: black;
+}
+.contenido-mensaje p{
+    font-size: 16px;
+    text-align: center;
+    color: rgb(216, 144, 85);
+}
+.img-gato{
+    border-radius: 20px 0 0 20px;
+}
+#svg9{
+    position: absolute;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
 }
 /* ############################## */
