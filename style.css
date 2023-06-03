@@ -563,8 +563,9 @@ li a{
     margin: auto;
 }
 .ancho-linea-contacto{min-width:calc(100% - 182px);}
+
 .chevron-reve{
-    position: fixed;
+    position: relative;
     top:30px;
     left: 40px;
     cursor: pointer;
@@ -768,6 +769,9 @@ textarea{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .chevron-reve{
+        position: absolute;
     }
     .contenedor-formulario{
         display: flex;
